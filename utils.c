@@ -29,12 +29,7 @@ int	ft_atoi(char *str)
 		i++;
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
-		if (res * sym > 2147483647)
-			return (-1);
-		else if (res * sym < -2147483648)
-			return (0);
-		else
-			res = res * 10 + (str[i] - '0');
+		res = res * 10 + (str[i] - 48);
 		i++;
 	}
 	return (sym * res);
